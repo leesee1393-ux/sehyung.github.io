@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="690" viewBox="0 0 1200 690">
+<title>Linux Smart Fan: integration troubleshooting</title>
+<rect width="1200" height="690" fill="#f6f2eb"/>
+<rect x="28" y="30" width="1144" height="630" rx="18" fill="#fffdf8" stroke="#d7cbbb"/>
+<text x="65" y="85" font-family="Noto Sans KR, sans-serif" font-size="30" font-weight="700" fill="#2c2a27">Smart Fan / 통합 문제 분석</text>
+<text x="65" y="121" font-family="Noto Sans KR, sans-serif" font-size="17" fill="#615b52">GPIO 입력 · I²C 전원 · Timer Logic · PWM ↔ LED 단계</text>
+<path d="M65 145 H1135" stroke="#d7cbbb"/>
+<g font-family="Noto Sans KR, sans-serif">
+<g transform="translate(65,175)">
+<rect width="518" height="208" rx="9" fill="#f5eee5" stroke="#d7cbbb"/>
+<text x="23" y="34" font-size="15" font-weight="700" fill="#873f32">01 / ENCODER</text>
+<text x="23" y="75" font-size="24" font-weight="700" fill="#2c2a27">엔코더 신호 극성</text>
+<text x="23" y="111" font-size="18" fill="#615b52">입력 파형 및 방향 값 검사</text>
+<rect x="23" y="133" width="472" height="49" rx="5" fill="#dce9e2"/>
+<text x="37" y="164" font-size="17" fill="#355746">S1/S2 전압 점검 → NPN 반전 회로 추가</text>
+</g>
+<g transform="translate(617,175)">
+<rect width="518" height="208" rx="9" fill="#f5eee5" stroke="#d7cbbb"/>
+<text x="23" y="34" font-size="15" font-weight="700" fill="#873f32">02 / LCD &amp; I²C</text>
+<text x="23" y="75" font-size="24" font-weight="700" fill="#2c2a27">LCD·I²C 출력 문제</text>
+<text x="23" y="111" font-size="18" fill="#615b52">전원 부하 및 버스 연결 점검</text>
+<rect x="23" y="133" width="472" height="49" rx="5" fill="#dce9e2"/>
+<text x="37" y="164" font-size="17" fill="#355746">외부 전원 적용 · 공통 GND 확인</text>
+</g>
+<g transform="translate(65,407)">
+<rect width="518" height="208" rx="9" fill="#f5eee5" stroke="#d7cbbb"/>
+<text x="23" y="34" font-size="15" font-weight="700" fill="#873f32">03 / TIMER</text>
+<text x="23" y="75" font-size="24" font-weight="700" fill="#2c2a27">타이머 미동작</text>
+<text x="23" y="111" font-size="18" fill="#615b52">모드·종료 조건 및 실행 흐름 점검</text>
+<rect x="23" y="133" width="472" height="49" rx="5" fill="#dce9e2"/>
+<text x="37" y="164" font-size="17" fill="#355746">상태 비교식 · 카운트다운 로직 재점검</text>
+</g>
+<g transform="translate(617,407)">
+<rect width="518" height="208" rx="9" fill="#f5eee5" stroke="#d7cbbb"/>
+<text x="23" y="34" font-size="15" font-weight="700" fill="#873f32">04 / DUTY MAPPING</text>
+<text x="23" y="75" font-size="24" font-weight="700" fill="#2c2a27">팬 Duty와 LED 표시 불일치</text>
+<text x="23" y="111" font-size="18" fill="#615b52">공유 매크로 정의와 표시 단위 불일치</text>
+<rect x="23" y="133" width="472" height="49" rx="5" fill="#dce9e2"/>
+<text x="37" y="163" font-size="16" fill="#355746">70/80/90/100% → LED 1/3/5/7개</text>
+</g>
+</g>
+<text x="65" y="645" font-family="Noto Sans KR, sans-serif" font-size="13" fill="#83776a">팀 통합 디버깅 자료를 바탕으로 재작성한 설명 도식 (원본 측정 사진은 아님)</text>
+</svg>
